@@ -12,26 +12,25 @@ public class Main {
         System.out.print("b: ");
         int b = Integer.parseInt(scanner.nextLine());
 
-        System.out.println("a + b = " + addition(a, b));
-        System.out.println("a - b = " + subtraction(a, b));
-        System.out.println("a * b = " + multiplication(a, b));
-        System.out.println("a / b = " + division(a, b));
+        System.out.println(addition(a, b));
+        System.out.println(subtraction(a, b));
+        System.out.println(multiplication(a, b));
+        System.out.println(division(a, b));
     }
 
-    private static int addition(int a, int b) {
-        return a + b;
+    private static String addition(int a, int b) {
+        return "a + b = " + (a + b);
     }
 
-    private static int subtraction(int a, int b) {
-        return a - b;
+    private static String subtraction(int a, int b) {
+        return "a - b = " + (a - b);
     }
 
-    private static int multiplication(int a, int b) {
-        return a * b;
+    private static String multiplication(int a, int b) {
+        return "a * b = " + (a * b);
     }
 
-    // if a < b we will return 0 as infinity
-    private static int division(int a, int b) {
-        return a > b ? a / b : 0;
+    private static String division(int a, int b) {
+        return a > b ? "a / b = " + (a / b) : "We can`t divide by zero!";
     }
 }

@@ -15,8 +15,6 @@ public class Main {
         System.out.println("a + b = " + addition(a, b));
         System.out.println("a - b = " + subtraction(a, b));
         System.out.println("a * b = " + multiplication(a, b));
-
-        // Potential trouble (division by zero)
         System.out.println("a / b = " + division(a, b));
     }
 
@@ -32,7 +30,8 @@ public class Main {
         return a * b;
     }
 
+    // if a < b we will return 0 as infinity
     private static int division(int a, int b) {
-        return a / b;
+        return a > b ? a / b : 0;
     }
 }
